@@ -1,0 +1,16 @@
+STSTNet
+STSTNet_Weights
+datasets
+norm_u_v_os
+our_model_part_A_weights
+ourmodel_threedatasets_weights-best
+results_file
+whole_norm_u_v_os
+ourmain_for_MMEW.py
+ourmain_for_MMEW_2.py
+ourmain_for_part_A.py
+ourmain_for_part_A_best_five_parts.py
+ourmain_for_part_C.py
+ourmain_for_three_datasets.py
+ourmain_for_three_datasets_best_five_parts_block_size_impacts.py
+STSNet_for_part_C.py
