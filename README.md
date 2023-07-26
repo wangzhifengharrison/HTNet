@@ -2,37 +2,34 @@
 
 A  Hierarchical Transformer Network (HTNet) to identify critical areas of facial muscle movement.
 
-Example of micro-expressions:
+Facial expression is related to facial muscle contractions and different muscle movements correspond to different emotional states.  For micro-expression recognition, the muscle movements are usually subtle, which has a negative impact on the performance of current facial emotion recognition algorithms.  Most existing methods use self-attention mechanisms  to capture relationships between tokens in a sequence, but they do not take into account the inherent spatial relationships between facial landmarks. This can result in sub-optimal performance on  micro-expression recognition tasks.Therefore, learning to recognize facial muscle movements is a key challenge in the area of micro-expression recognition.  In this paper, we propose a Hierarchical Transformer Network (HTNet) to identify critical areas of facial muscle movement.  HTNet includes two major components: a transformer layer that leverages the local temporal features and an aggregation layer that extracts local and global semantical facial features.  Specifically, HTNet divides the face into four different facial areas: left lip area, left eye area, right eye area and right lip area.  The transformer layer is used to focus on representing local minor muscle movement with local self-attention in each area.  The aggregation layer is used to learn the interactions between eye areas and lip areas. The experiments on four publicly available micro-expression datasets show that the proposed approach outperforms previous methods by a large margin.
 
-<img src="https://github.com/christy1206/biwoof/blob/pictures/006_006_1_2.gif" width="200" height="200"/> <img src="https://github.com/christy1206/biwoof/blob/pictures/s03_s03_po_11.gif" width="200" height="200"/> <img src="https://github.com/christy1206/biwoof/blob/pictures/sub11_EP15_04f.gif" width="200" height="200"/>
+<img src="https://github.com/wangzhifengharrison/HTNet/blob/master/images/micro-architecture.png" width="700" height="480"/>
+HTNet: Overall architectures of hierarchical transformer network for micro-expression recognition.Low-level self-attention in transformer layerscaptures fine-grained features in local regions. High-level self-attention in transformer layers captures coarse-grained features in global regions. An aggregation block isproposed to create interactions between different blocks at the same level.
 
-SAMM (006_006_1_2), SMIC (s03_s03_po_11), CASME II (sub11_EP15_04f)
+The experiments are implemented on SAMM[32], SMIC[33], CASME II[34] and CASME III [35] databases. SAMM, SMIC, and CASME II are merged into one composite dataset,and the same labels in these three datasets are adopted for micro-expression tasks. In these datasets, the “positive” emotion category includes the “happiness” emotion class, and the “negative” emotion category includes “sadness”,“disgust”, “contempt”, “fear” and “anger”
+emotion classes while “surprise” emotion category only includes “surprise” class:
 
-STSTNet is a two-layer neural network that is capable to learn the features from three optical flow features (horizontal optical flow images, vertical optical flow images and optical strain) computed from the onset and apex frames from each video. Please find the source code for optical flow adopted in this experiment at http://www.ipol.im/pub/art/2013/26/
-
-<img src="https://github.com/christy1206/STSTNet/blob/picture/flow.JPG" width="500" height="400"/>
-
-The recognition results achieved are:
-
-<img src="https://github.com/christy1206/STSTNet/blob/picture/result.JPG" width="600" height="150"/>
-
-The databases include CASME II (145 videos), SMIC (164 videos) and SAMM (133 videos). "Full" is the composite database of the 3 databases (442 videos).
+<img src="https://github.com/wangzhifengharrison/HTNet/blob/master/images/datasets.png" width="700" height="500"/>
 
 
-The exact configuration of STSTNet is:
+The Unweighted F1-score (UF1) and Unweighted Average Recall (UAR) performance of handcraft methods, deep learning methods and our HTNet method under LOSO protocol on the composite (Full), SMIC, CASME II and SAMM. Bold text indicates the best result.
 
-<img src="https://github.com/christy1206/STSTNet/blob/picture/configuration.JPG" width="500" height="200"/>
+The results are listed as follows:
 
+<img src="https://github.com/wangzhifengharrison/HTNet/blob/master/images/state_of_art.png" width="700" height="500"/>
+
+We investigate the effects of the transformer layer’s head count on accuracy in composite datasetsSMIC, SAMM and CASME II. The composite datasets’ Unweighted F1-score (UF1) and Unweighted Average Recall (UAR) performance are reported.
+<img src="https://github.com/wangzhifengharrison/HTNet/blob/master/images/effects_trasformer.png" width="700" height="500"/>
 ## Python code
 
-Pytorch framework is used to reproduce the result. Note that the results obtained are slightly lower from the original work. The result for Full (Composite) is UF1: 0.7209 and UAR: 0.725.
 
-<b>Step 1)</b> Please download the dataset from https://bit.ly/2S35u05 and put it in /datasets
+<b>Step 1)</b> Please download the dataset and put it in /datasets
 
 <b>Step 2)</b> Place the files in the structure as follows:
 >├─datasets <br>
->|--three_norm_u_v_os
->|--combined_datasets_whole
+>--three_norm_u_v_os <br>
+>--combined_datasets_whole <br>
 >├─main_HTNet.py <br>
 >├─requirements.txt <br>
 
