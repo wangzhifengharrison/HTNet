@@ -28,8 +28,8 @@ We investigate the effects of the transformer layer’s head count on accuracy i
 
 <b>Step 2)</b> Place the files in the structure as follows:
 >├─datasets <br>
->|--three_norm_u_v_os <br>
->|--combined_datasets_whole <br>
+>--three_norm_u_v_os <br>
+>--combined_datasets_whole <br>
 >├─main_HTNet.py <br>
 >├─requirements.txt <br>
 
