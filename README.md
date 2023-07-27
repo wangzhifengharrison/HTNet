@@ -25,7 +25,7 @@ The results are listed as follows:
 
 We investigate the effects of the transformer layer’s head count on accuracy in composite datasetsSMIC, SAMM and CASME II. The composite datasets’ Unweighted F1-score (UF1) and Unweighted Average Recall (UAR) performance are reported.
 <p align="center">
-<img src="https://github.com/wangzhifengharriso</b>n/HTNet/blob/master/images/effects_trasformer.png" width="500"/>
+<img src="https://github.com/wangzhifengharrison/HTNet/blob/master/images/effects_trasformer.png" width="500"/>
 </p>
 ## Python code
 
