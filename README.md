@@ -17,10 +17,10 @@ The Unweighted F1-score (UF1) and Unweighted Average Recall (UAR) performance of
 
 The results are listed as follows:
 
-<img src="https://github.com/wangzhifengharrison/HTNet/blob/master/images/state_of_art.png" width="700" height="500"/>
+<img src="https://github.com/wangzhifengharrison/HTNet/blob/master/images/state_of_art.png" width="500" />
 
 We investigate the effects of the transformer layer’s head count on accuracy in composite datasetsSMIC, SAMM and CASME II. The composite datasets’ Unweighted F1-score (UF1) and Unweighted Average Recall (UAR) performance are reported.
-<img src="https://github.com/wangzhifengharrison/HTNet/blob/master/images/effects_trasformer.png" width="700" height="500"/>
+<img src="https://github.com/wangzhifengharrison/HTNet/blob/master/images/effects_trasformer.png" width="500"/>
 ## Python code
 
 
