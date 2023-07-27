@@ -11,20 +11,20 @@ HTNet: Overall architectures of hierarchical transformer network for micro-expre
 
 The experiments are implemented on SAMM[32], SMIC[33], CASME II[34] and CASME III [35] databases. SAMM, SMIC, and CASME II are merged into one composite dataset,and the same labels in these three datasets are adopted for micro-expression tasks. In these datasets, the “positive” emotion category includes the “happiness” emotion class, and the “negative” emotion category includes “sadness”,“disgust”, “contempt”, “fear” and “anger”
 emotion classes while “surprise” emotion category only includes “surprise” class:
-<p>
+<p align="center">
 <img src="https://github.com/wangzhifengharrison/HTNet/blob/master/images/datasets.png" width="500" />
 </p>
 
 The Unweighted F1-score (UF1) and Unweighted Average Recall (UAR) performance of handcraft methods, deep learning methods and our HTNet method under LOSO protocol on the composite (Full), SMIC, CASME II and SAMM. Bold text indicates the best result.
 
 The results are listed as follows:
-<p>
+<p align="center">
   <img src="https://github.com/wangzhifengharrison/HTNet/blob/master/images/state_of_art.png" width="500" />
 </p>
 
 
 We investigate the effects of the transformer layer’s head count on accuracy in composite datasetsSMIC, SAMM and CASME II. The composite datasets’ Unweighted F1-score (UF1) and Unweighted Average Recall (UAR) performance are reported.
-<p>
+<p align="center">
 <img src="https://github.com/wangzhifengharrison/HTNet/blob/master/images/effects_trasformer.png" width="500"/>
 </p>
 ## Python code
