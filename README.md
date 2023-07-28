@@ -47,8 +47,8 @@ We investigate the effects of the transformer layer’s head count on accuracy i
 
 ``` python main_HTNet.py --train False```
 
-#Citation
-If you find our work useful for your project, please consider citing the paper
+# Citation
+If you find our work useful for your project, please consider citing the paper<br>
 @misc{wang2023htnet,
       title={HTNet for micro-expression recognition}, 
       author={Zhifeng Wang and Kaihao Zhang and Wenhan Luo and Ramesh Sankaranarayana},
