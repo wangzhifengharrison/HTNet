@@ -14,7 +14,7 @@ import torch
 from Model import HTNet
 import numpy as np
 from facenet_pytorch import MTCNN
-
+# Some of the codes are adapted from STSNet
 def reset_weights(m):  # Reset the weights for network to avoid weight leakage
     for layer in m.children():
         if hasattr(layer, 'reset_parameters'):
@@ -170,8 +170,8 @@ def main(config):
         device = torch.device('cpu')
     loss_fn = nn.CrossEntropyLoss()
     if (config.train):
-        if not path.exists('STSTNet_Weights'):
-            os.mkdir('STSTNet_Weights')
+        if not path.exists('ourmodel_threedatasets_weights'):
+            os.mkdir('ourmodel_threedatasets_weights')
 
     print('lr=%f, epochs=%d, device=%s\n' % (learning_rate, epochs, device))
 
@@ -222,11 +222,11 @@ def main(config):
         model = HTNet(
             image_size=28,
             patch_size=7,
-            dim=256,  # 256,--96, 56-66.9, 192-71.33
-            heads=3,  # 3 ----  72, 6-71.35
+            dim=256,  # 256,--96, 56-, 192
+            heads=3,  # 3 ---- , 6-
             num_hierarchies=3,  # 3----number of hierarchies
             block_repeats=(2, 2, 10),#(2, 2, 8),------
-            # the number of transformer blocks at each heirarchy, starting from the bottom(2,2,20) - 70.74
+            # the number of transformer blocks at each heirarchy, starting from the bottom(2,2,20) -
             num_classes=3
         )
 
