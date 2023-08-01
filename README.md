@@ -1,5 +1,10 @@
 # HTNet for micro-expression recognition
 
+Official implementation of our paper:  
+**HTNet for micro-expression recognition**  
+Zhifeng Wang, Kaihao Zhang, Wenhan Luo, Ramesh Sankaranarayana 
+[[paper]](https://arxiv.org/abs/2307.14637)
+
 A  Hierarchical Transformer Network (HTNet) to identify critical areas of facial muscle movement.
 
 Facial expression is related to facial muscle contractions and different muscle movements correspond to different emotional states.  For micro-expression recognition, the muscle movements are usually subtle, which has a negative impact on the performance of current facial emotion recognition algorithms.  Most existing methods use self-attention mechanisms  to capture relationships between tokens in a sequence, but they do not take into account the inherent spatial relationships between facial landmarks. This can result in sub-optimal performance on  micro-expression recognition tasks.Therefore, learning to recognize facial muscle movements is a key challenge in the area of micro-expression recognition.  In this paper, we propose a Hierarchical Transformer Network (HTNet) to identify critical areas of facial muscle movement.  HTNet includes two major components: a transformer layer that leverages the local temporal features and an aggregation layer that extracts local and global semantical facial features.  Specifically, HTNet divides the face into four different facial areas: left lip area, left eye area, right eye area and right lip area.  The transformer layer is used to focus on representing local minor muscle movement with local self-attention in each area.  The aggregation layer is used to learn the interactions between eye areas and lip areas. The experiments on four publicly available micro-expression datasets show that the proposed approach outperforms previous methods by a large margin.
@@ -27,6 +32,7 @@ We investigate the effects of the transformer layer’s head count on accuracy i
 <p align="center">
 <img src="https://github.com/wangzhifengharrison/HTNet/blob/master/images/effects_trasformer.png" width="500"/>
 </p>
+
 ## Python code
 
 
@@ -47,5 +53,16 @@ We investigate the effects of the transformer layer’s head count on accuracy i
 
 ``` python main_HTNet.py --train False```
 
-
+# Citation
+If you find our work useful for your project, please consider citing the paper<br>
+```bibtex
+@misc{wang2023htnet,
+      title={HTNet for micro-expression recognition}, 
+      author={Zhifeng Wang and Kaihao Zhang and Wenhan Luo and Ramesh Sankaranarayana},
+      year={2023},
+      eprint={2307.14637},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
 Thank you for your interest and support.
