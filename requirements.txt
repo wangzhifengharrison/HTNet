@@ -1,0 +1,15 @@
+einops==0.4.1
+facenet_pytorch==2.5.2
+matplotlib==3.5.3
+numpy==1.23.1
+opencv_python==4.6.0.66
+pandas==1.4.4
+Pillow==9.2.0
+Pillow==8.2.0
+Pillow==10.0.0
+scikit_learn==1.1.2
+scipy==1.9.1
+torch==1.12.1
+torch_summary==1.4.5
+torchvision==0.13.1
+vit_pytorch==0.35.8
