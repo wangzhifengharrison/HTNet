@@ -54,7 +54,7 @@ We investigate the effects of the transformer layer’s head count on accuracy i
 
 <b>Step 4)</b> Training and Evaluation
 
-``` python main_HTNet.py --train False```
+``` python main_HTNet.py --train True```
 
 # Citation
 If you find our work useful for your project, please consider citing the paper<br>
