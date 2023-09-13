@@ -190,41 +190,9 @@ def main(config):
 
         weight_path = 'maxvitNet_Weights' + '/' + n_subName + '.pth'
 
-        # load max vit model
-        # model = MaxViT(
-        #     num_classes=3,
-        #     dim_conv_stem=64,
-        #     # dimension of the convolutional stem, would default to dimension of first layer if not specified
-        #     dim=96,  # dimension of first layer, doubles every layer
-        #     dim_head=32,  # dimension of attention heads, kept at 32 in paper
-        #     depth=(2, 2, 5, 2),
-        #     # number of MaxViT blocks per stage, which consists of MBConv, block-like attention, grid-like attention
-        #     window_size=7,  # window size for block and grids
-        #     mbconv_expansion_rate=4,  # expansion rate of MBConv
-        #     mbconv_shrinkage_rate=0.25,  # shrinkage rate of squeeze-excitation in MBConv
-        #     dropout=0.1  # dropout
-        # )
-        # model = NesT(
-        #     image_size=28,
-        #     patch_size=7,
-        #     dim=96,  # 96, 56-66.9
-        #     heads=3,  # 3 -  72, 6-71.35
-        #     num_hierarchies=3,  # number of hierarchies
-        #     block_repeats=(2, 2, 8),
-        #     # the number of transformer blocks at each heirarchy, starting from the bottom(2,2,20) - 70.74
-        #     num_classes=3
-        # )
 
         model = AlexNet()
 
-        # model = CrossFormer(
-        #     num_classes=3,  # number of output classes
-        #     dim=(64, 128, 256, 512),  # dimension at each stage
-        #     depth=(2, 2, 8, 2),  # depth of transformer at each stage
-        #     global_window_size=(8, 4, 2, 1),  # global window sizes at each stage
-        #     local_window_size=7,
-        #     # local window size (can be customized for each stage, but in paper, held constant at 7 for all stages)
-        # )
 
         model = model.to(device)
 
