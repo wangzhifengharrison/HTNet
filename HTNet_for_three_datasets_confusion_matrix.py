@@ -516,16 +516,6 @@ def main(config):
             num_classes=3
         )
 
-        # five_parts_model = NesT(
-        #     image_size=14,
-        #     patch_size=7,
-        #     dim=256,  # 96, 56-66.9, 192-71.33
-        #     heads=3,  # 3 -  72, 6-71.35
-        #     num_hierarchies=2,  # number of hierarchies
-        #     block_repeats=(2, 2, 8),
-        #     # the number of transformer blocks at each heirarchy, starting from the bottom(2,2,20) - 70.74
-        #     num_classes=3
-        # )
 
         # fusionmodel = Fusionmodel().to(device)
 
