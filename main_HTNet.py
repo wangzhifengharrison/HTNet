@@ -314,7 +314,6 @@ def main(config):
         best_total_pred.extend(best_each_subject_pred)
         UF1, UAR = recognition_evaluation(total_gt, total_pred, show=True)
         best_UF1, best_UAR = recognition_evaluation(total_gt, best_total_pred, show=True)
-        print('UF1:', round(UF1, 4), '| UAR:', round(UAR, 4))
         print('best UF1:', round(best_UF1, 4), '| best UAR:', round(best_UAR, 4))
 
     print('Final Evaluation: ')
