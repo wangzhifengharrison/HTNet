@@ -59,13 +59,14 @@ We investigate the effects of the transformer layer’s head count on accuracy i
 # Citation
 If you find our work useful for your project, please consider citing the paper<br>
 ```bibtex
-@misc{wang2023htnet,
-      title={HTNet for micro-expression recognition}, 
-      author={Zhifeng Wang and Kaihao Zhang and Wenhan Luo and Ramesh Sankaranarayana},
-      year={2023},
-      eprint={2307.14637},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{wang2024htnet,
+  title={Htnet for micro-expression recognition},
+  author={Wang, Zhifeng and Zhang, Kaihao and Luo, Wenhan and Sankaranarayana, Ramesh},
+  journal={Neurocomputing},
+  volume={602},
+  pages={128196},
+  year={2024},
+  publisher={Elsevier}
 }
 ```
 Thank you for your interest and support.
